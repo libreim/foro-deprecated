@@ -29,18 +29,35 @@
 
       header {
          background: #333;
-         padding: 6px 20px;
+         padding: 6px 0;
          color: #eee;
       }
       header a {
+         max-width: 980px;
+         display: block;
          text-decoration: none;
          color: #eee;
       }
       h1 {
-         max-width: 980px;
          margin: 0 auto;
          font-size: 14px;
          font-weight: normal;
+      }
+
+      nav.links div {
+      	margin: 0 auto;
+      	padding: 0;
+      	max-width: 980px;
+      	background: inherit;
+      }
+      nav.links a {
+      	padding: 1.2% 1rem;
+      	display: inline-block;
+      	text-decoration: none;
+      }
+      nav.sites a.l-foro {
+      	background: #ebebeb;
+      	color: #333;
       }
 
       /** Bold/italics tip **/
@@ -149,19 +166,26 @@
          <a href="/">
             <h1>Doble Grado en Ingeniería Informática y Matemáticas</h1>
          </a>
+
+      	<nav class="sites links">
+      		<div>
+      			<a href="/blog" class="l-blog">Blog</a>
+      			<a href="/foro" class="l-foro">Foro</a>
+      		</div>
+      	</nav>
       </header>
-      
+
       <!-- (2) Placeholder for the forum. The forum will be rendered inside this element -->
-      <div class="moot">
- 
-         <a class="moot-url" href="https://moot.it/i/dgiim">
+      <div class="muut">
+
+         <a class="muut-url" href="https://muut.com/i/dgiim">
             Foro DGIIM
          </a>
-       
+
          <div class="m-h3"><a href="#!/general">General</a></div>
             <a href="#!/general/ugr">UGR</a>
             <a href="#!/general/offtopic">Off topic</a>
-       
+
          <div class="m-h3"><a href="#!/matematicas">Matemáticas</a></div>
             <a href="#!/matematicas/analisis">Análisis</a>
             <a href="#!/matematicas/geometria">Geometría</a>
@@ -170,7 +194,7 @@
             <a href="#!/matematicas/estadistica">Estadística y Probabilidad</a>
             <a href="#!/matematicas/aplicada">Matemática Aplicada</a>
             <a href="#!/matematicas/recursos">Recursos matemáticos</a>
-       
+
          <div class="m-h3"><a href="#!/informatica">Informática</a></div>
             <a href="#!/informatica/computacion">Computación</a>
             <a href="#!/informatica/programacion">Programación</a>
@@ -178,7 +202,7 @@
             <a href="#!/informatica/datos">Datos</a>
             <a href="#!/informatica/arquitectura">Arquitectura</a>
             <a href="#!/informatica/recursos">Recursos informáticos</a>
-       
+
       </div>
    </body>
 
