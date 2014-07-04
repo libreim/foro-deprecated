@@ -29,18 +29,35 @@
 
       header {
          background: #333;
-         padding: 6px 20px;
+         padding: 6px 0;
          color: #eee;
       }
       header a {
+         max-width: 980px;
+         display: block;
          text-decoration: none;
          color: #eee;
       }
       h1 {
-         max-width: 980px;
          margin: 0 auto;
          font-size: 14px;
          font-weight: normal;
+      }
+
+      nav.links div {
+      	margin: 0 auto;
+      	padding: 0;
+      	max-width: 980px;
+      	background: inherit;
+      }
+      nav.links a {
+      	padding: 1.2% 1rem;
+      	display: inline-block;
+      	text-decoration: none;
+      }
+      nav.sites a.l-foro {
+      	background: #ebebeb;
+      	color: #333;
       }
 
       /** Bold/italics tip **/
@@ -149,6 +166,13 @@
          <a href="/">
             <h1>Doble Grado en Ingeniería Informática y Matemáticas</h1>
          </a>
+
+      	<nav class="sites links">
+      		<div>
+      			<a href="/blog" class="l-blog">Blog</a>
+      			<a href="/foro" class="l-foro">Foro</a>
+      		</div>
+      	</nav>
       </header>
 
       <!-- (2) Placeholder for the forum. The forum will be rendered inside this element -->
