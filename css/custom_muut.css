@@ -8,37 +8,8 @@ body {
    font-size: 15px;
 }
 
-header {
-   background: #6789AB;
-   padding: 6px 0 0;
-   color: #eee;
-}
-header a {
-   display: block;
-   text-decoration: none;
-   color: #eee;
-}
-h1 {
-   max-width: 980px;
-   margin: 0 auto 6px;
-   font-size: 14px;
-   font-weight: normal;
-}
-
-nav.links div {
-  margin: 0 auto;
-  padding: 0;
-  max-width: 980px;
-  background: inherit;
-}
-nav.links a {
-  padding: 1.2% 1rem;
-  display: inline-block;
-  text-decoration: none;
-}
-nav.sites a.l-foro {
-  background: #ebebeb;
-  color: #333;
+.m-header {
+  background: #A8BCCF;
 }
 
 /** Bold/italics tip **/
