@@ -8,7 +8,7 @@ body {
    font-size: 15px;
 }
 
-.m-header {
+.m-header, .m-subnavi {
   background: #A8BCCF;
 }
 
