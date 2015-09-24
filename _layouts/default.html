@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <link rel="stylesheet" href="//yandex.st/highlightjs/8.0/styles/github.min.css">
+      <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" />
+      <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/pure/0.6.0/pure-min.css" />
+      <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/pure/0.6.0/grids-responsive-min.css" />
+      <!--link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/pure/0.6.0/menus-min.css" /-->
+
+      <link rel="stylesheet" type="text/css" href="/blog/css/default.css" />
+
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta charset="utf-8">
+      <script src="//ajax.googleapis.com/ajax/libs/webfont/1.4.7/webfont.js"></script>
+      <script type="text/javascript">
+         WebFont.load({
+            google: {
+               families: ["Lato:400,300,700,400italic:latin", "Source+Code+Pro:400,700:latin"]
+            }
+         });
+      </script>
+
+      {% if page.muut %}
+      <link rel="stylesheet" href="https://cdn.muut.com/1/moot.css">
+      <link href="{{ site.baseurl }}/css/custom_muut.css" rel="stylesheet" />
+      <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+      <script src="{{ site.baseurl }}/js/custom_muut.js"></script>
+      {% endif %}
+
+      {% if page.mathjax %}
+      <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+      <script type="text/javascript">
+
+         // Shamelessly stolen from StackOverflow (http://stackoverflow.com/a/14570614)
+         var observeDOM = (function(){
+             var MutationObserver = window.MutationObserver || window.WebKitMutationObserver,
+                 eventListenerSupported = window.addEventListener;
+
+             return function(obj, callback){
+                 if( MutationObserver ){
+                     // define a new observer
+                     var obs = new MutationObserver(function(mutations, observer){
+                         if( mutations[0].addedNodes.length || mutations[0].removedNodes.length )
+                             callback();
+                     });
+                     // have the observer observe foo for changes in children
+                     obs.observe( obj, { childList:true, subtree:true });
+                 }
+                 else if( eventListenerSupported ){
+                     obj.addEventListener('DOMNodeInserted', callback, false);
+                     obj.addEventListener('DOMNodeRemoved', callback, false);
+                 }
+             }
+         })();
+         observeDOM(document, function() {
+            MathJax.Hub.Queue(["Typeset",MathJax.Hub]);
+         });
+      </script>
+      {% endif %}
+
+      <title>{{ page.title }}</title>
+   </head>
+   <body>
+      {% include header.ext %}
+      <article>
+        {% assign post = page %}
+        {% include post.ext %}
+      </article>
+      {% include footer.ext %}
+   </body>
+</html>
