@@ -5,9 +5,9 @@
       <div class="pure-u-22-24 pure-u-md-22-24 pure-u-lg-3-5">
         <div class="pure-g">
           <div class="author pure-u-1">
-            <a href="/foro" class="selected">Foro</a>
+            <a href="{{ site.baseurl }}/" class="selected">Foro</a>
             ·
-            <a href="/calendar">Calendario</a>
+            <a href="{{ site.base_path }}/calendar/">Calendario</a>
           </div>
         </div>
       </div>
